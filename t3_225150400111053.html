@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Formulir Biodata</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            width: 500px;
+            padding: 50px;
+            border: 3px solid black;
+            border-radius: 5px;
+            background-color: #e6e6fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulir Biodata</h2>
+        <form id="biodataForm" action="t3_225150400111053.php" method="POST">
+            <label for="nama">Nama :</label>
+            <input type="text" id="nama" name="nama" required><br><br>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="tanggalLahir">Tanggal Lahir</label>
+            <input type="date" id="tanggalLahir" name="tanggalLahir"><br><br>
+
+            <label for="gender">Jenis Kelamin :</label><br>
+            <input type="radio" id="lk" name="gender" value="Laki-laki" required>
+            <label for="lk">Laki-laki</label><br>
+            <input type="radio" id="pr" name="gender" value="Perempuan" required>
+            <label for="pr">Perempuan</label><br><br>
+
+            <label for="tempat">Tempat Tinggal :</label>
+            <select id="tempat" name="tempat">
+                <option value="Rumah">Rumah</option>
+                <option value="Kost">Kost</option>
+                <option value="Kontrakan">Kontrakan</option>
+            </select><br><br>
+
+            <label for="alamat">Alamat :</label>
+            <input type="text" id="alamat" name="alamat" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <hr class="divider">
+        <div id="response"></div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="t3_225150400111053.js"></script>
+</body>
+</html>
